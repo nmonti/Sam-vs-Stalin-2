@@ -1,0 +1,9 @@
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\bin\Debug\Sam vs Stalin 2.exe.config
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\bin\Debug\Sam vs Stalin 2.exe
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\bin\Debug\Sam vs Stalin 2.pdb
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam vs Stalin 2.csprojResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam_vs_Stalin_2.SinglePlayer.resources
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam_vs_Stalin_2.Properties.Resources.resources
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam vs Stalin 2.csproj.GenerateResource.Cache
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam vs Stalin 2.exe
+c:\users\nick\documents\visual studio 2013\Projects\Sam vs Stalin 2\Sam vs Stalin 2\obj\Debug\Sam vs Stalin 2.pdb

@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sam vs Stalin 2.exe" size="6033408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sam vs Stalin 2.exe" size="16037376">
       <assemblyIdentity name="Sam vs Stalin 2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kw3qApePKoSzni7UKVqJCFTQRHo=</dsig:DigestValue>
+        <dsig:DigestValue>8AjQXmSZ5YaM5e7hP/kN+QN5Zx4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

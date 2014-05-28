@@ -136,13 +136,28 @@
   <data name="battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battle.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="gerudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gerudo.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bossbattle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bossbattle.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="complete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\complete.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="deku_palace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deku_palace.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="failure" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\failure.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gameset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gameset.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="midboss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\midboss.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gerudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gerudo.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pirate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pirate.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\321.ogg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

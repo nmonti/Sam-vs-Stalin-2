@@ -23,7 +23,10 @@ namespace Sam_vs_Stalin_2
 
         Random rnd = new Random();
         IWavePlayer player = new WaveOut();
+        IWaveProvider vorbis;
+        MemoryStream oggStream;
         int dir;
+        bool playable = false;
 
         public SinglePlayer()
         {
@@ -44,26 +47,27 @@ namespace Sam_vs_Stalin_2
         */
         private void SinglePlayer_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            if (playable)
             {
-                case Keys.W:
-                    tmrLeoUp.Enabled = true;
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        tmrLeoUp.Enabled = true;
+                        break;
 
-                case Keys.S:
-                    tmrLeoDown.Enabled = true;
-                    break;
+                    case Keys.S:
+                        tmrLeoDown.Enabled = true;
+                        break;
 
-                case Keys.A:
-                    tmrLeoLeft.Enabled = true;
-                    break;
+                    case Keys.A:
+                        tmrLeoLeft.Enabled = true;
+                        break;
 
-                case Keys.D:
-                    tmrLeoRight.Enabled = true;
-                    break;
+                    case Keys.D:
+                        tmrLeoRight.Enabled = true;
+                        break;
 
-                case Keys.Space:
-                    {
+                    case Keys.Space:
                         if (!weaponFired(tmrSpear))
                         {
                             spear.Location = new Point(leonidas.Location.X + leonidas.Width - 20, leonidas.Location.Y + 25);
@@ -71,9 +75,8 @@ namespace Sam_vs_Stalin_2
                             tmrSpear.Enabled = true;
                         }
                         break;
-                    }
+                }
             }
-                
 
         }
         
@@ -148,16 +151,19 @@ namespace Sam_vs_Stalin_2
                 player.Top = this.Size.Height - player.Height-35;
         }
 
-        private void disableTimers()
+        private void disableTimers(bool enabled)
         {
-            tmrLeoUp.Enabled          = false;
-            tmrLeoDown.Enabled        = false;
-            tmrLeoLeft.Enabled        = false;
-            tmrLeoRight.Enabled       = false;
-            tmrSpear.Enabled          = false;
-            tmrXerxes.Enabled         = false;
-            tmrXerxesMovement.Enabled = false;
-            tmrFez.Enabled            = false;
+            playable                  = enabled;
+            tmrXerxes.Enabled         = enabled;
+            tmrXerxesMovement.Enabled = enabled;
+            tmrFez.Enabled            = enabled;
+            if (!playable)
+            {
+                tmrLeoUp.Enabled = false;
+                tmrLeoDown.Enabled = false;
+                tmrLeoLeft.Enabled = false;
+                tmrLeoRight.Enabled = false;
+            }
 
 
         }
@@ -186,9 +192,10 @@ namespace Sam_vs_Stalin_2
                 health.Value -= 25;
                 if (health.Value == 0)
                 {
-                    disableTimers();
+                    disableTimers(false);
                     stopSound();
                     playSound(health.Tag.ToString());
+                    leonidas.Location = new Point(leonidas.Location.X, leonidas.Location.Y);
                     MessageBox.Show(weapon.Tag + " wins!");
                     
                     this.Close();
@@ -204,7 +211,7 @@ namespace Sam_vs_Stalin_2
             if (!weaponFired(tmrFez))
             {
                 fez.Location = new Point(xerxes.Location.X, xerxes.Location.Y + 20);
-                fez.Visible = true;
+                //fez.Visible = true;
                 tmrFez.Enabled = true;
             }
         }
@@ -237,6 +244,7 @@ namespace Sam_vs_Stalin_2
 
         private void tmrFez_Tick(object sender, EventArgs e)
         {
+            fez.Visible = true;
             collision(leonidas, fez, leonidasHealth, tmrFez);
             fez.Left -= 20;
         }
@@ -246,6 +254,7 @@ namespace Sam_vs_Stalin_2
             player.Stop();
             player.Dispose();
         }
+
         /*
          * Default to start state, optional parameter usage
          * STATES:
@@ -257,23 +266,36 @@ namespace Sam_vs_Stalin_2
         {
             // NAudio with NVorbis for ogg playback
            
-            int sound = rnd.Next(0, 2);
+            int sound = rnd.Next(0, 5);
             
-            IWaveProvider vorbis;
-            MemoryStream oggStream;
-
+            
+            
             switch (sound)
             {
                 case 0:
-                    {
-                        oggStream = new MemoryStream(Properties.Resources.gerudo);
-                        break;
-                    }
+                    oggStream = new MemoryStream(Properties.Resources.battle);
+                    break;
+                    
                 case 1:
-                    {
-                        oggStream = new MemoryStream(Properties.Resources.battle);
-                        break;
-                    }
+                    oggStream = new MemoryStream(Properties.Resources.bossbattle);
+                    break;
+
+                case 2:
+                    oggStream = new MemoryStream(Properties.Resources.deku_palace);
+                    break;
+
+                case 3:
+                    oggStream = new MemoryStream(Properties.Resources.gerudo);
+                    break;
+
+                case 4:
+                    oggStream = new MemoryStream(Properties.Resources.midboss);
+                    break;
+
+                case 5:
+                    oggStream = new MemoryStream(Properties.Resources.pirate);
+                    break;
+                    
                 default:
                     {
                         oggStream = new MemoryStream(Properties.Resources.gerudo);
@@ -282,7 +304,7 @@ namespace Sam_vs_Stalin_2
             }
 
             if (state == "W")
-                oggStream = new MemoryStream(Properties.Resources.gameset);
+                oggStream = new MemoryStream(Properties.Resources.complete);
             else if (state == "L")
                 oggStream = new MemoryStream(Properties.Resources.failure);
 
@@ -294,7 +316,19 @@ namespace Sam_vs_Stalin_2
 
         private void SinglePlayer_Load(object sender, EventArgs e)
         {
+            oggStream = new MemoryStream(Properties.Resources._321);
+            vorbis = new VorbisFileReader(oggStream);
+            player.Init(vorbis);
+            player.Play();
+            disableTimers(false);
+        }
+
+        private void tmrStart_Tick(object sender, EventArgs e)
+        {
+            disableTimers(true);
+            stopSound();
             playSound();
+            tmrStart.Enabled = false;
         }
         
     }

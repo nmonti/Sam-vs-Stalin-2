@@ -63,9 +63,49 @@ namespace Sam_vs_Stalin_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] _321 {
+            get {
+                object obj = ResourceManager.GetObject("_321", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] battle {
             get {
                 object obj = ResourceManager.GetObject("battle", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] bossbattle {
+            get {
+                object obj = ResourceManager.GetObject("bossbattle", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] complete {
+            get {
+                object obj = ResourceManager.GetObject("complete", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] deku_palace {
+            get {
+                object obj = ResourceManager.GetObject("deku_palace", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -87,16 +127,6 @@ namespace Sam_vs_Stalin_2.Properties {
             get {
                 object obj = ResourceManager.GetObject("fez", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] gameset {
-            get {
-                object obj = ResourceManager.GetObject("gameset", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         
@@ -127,6 +157,26 @@ namespace Sam_vs_Stalin_2.Properties {
             get {
                 object obj = ResourceManager.GetObject("leonidas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] midboss {
+            get {
+                object obj = ResourceManager.GetObject("midboss", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] pirate {
+            get {
+                object obj = ResourceManager.GetObject("pirate", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

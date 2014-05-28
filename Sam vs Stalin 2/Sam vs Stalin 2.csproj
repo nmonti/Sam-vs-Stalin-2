@@ -114,10 +114,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\321.ogg" />
     <None Include="Resources\battle.ogg" />
+    <None Include="Resources\bossbattle.ogg" />
+    <None Include="Resources\complete.ogg" />
+    <None Include="Resources\deku_palace.ogg" />
     <None Include="Resources\failure.ogg" />
-    <None Include="Resources\gameset.ogg" />
     <None Include="Resources\gerudo.ogg" />
+    <None Include="Resources\midboss.ogg" />
+    <None Include="Resources\pirate.ogg" />
     <None Include="Sam vs Stalin 2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

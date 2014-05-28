@@ -45,6 +45,7 @@ namespace Sam_vs_Stalin_2
             this.tmrXerxes = new System.Windows.Forms.Timer(this.components);
             this.tmrXerxesMovement = new System.Windows.Forms.Timer(this.components);
             this.tmrFez = new System.Windows.Forms.Timer(this.components);
+            this.tmrStart = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.leonidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xerxes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spear)).BeginInit();
@@ -93,6 +94,7 @@ namespace Sam_vs_Stalin_2
             this.fez.BackColor = System.Drawing.Color.Transparent;
             this.fez.BackgroundImage = global::Sam_vs_Stalin_2.Properties.Resources.fez;
             this.fez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fez.Enabled = false;
             this.fez.Location = new System.Drawing.Point(1324, 456);
             this.fez.Name = "fez";
             this.fez.Size = new System.Drawing.Size(50, 33);
@@ -174,6 +176,12 @@ namespace Sam_vs_Stalin_2
             this.tmrFez.Interval = 1;
             this.tmrFez.Tick += new System.EventHandler(this.tmrFez_Tick);
             // 
+            // tmrStart
+            // 
+            this.tmrStart.Enabled = true;
+            this.tmrStart.Interval = 4000;
+            this.tmrStart.Tick += new System.EventHandler(this.tmrStart_Tick);
+            // 
             // SinglePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +232,7 @@ namespace Sam_vs_Stalin_2
         private System.Windows.Forms.Timer tmrXerxes;
         private System.Windows.Forms.Timer tmrXerxesMovement;
         private System.Windows.Forms.Timer tmrFez;
+        private System.Windows.Forms.Timer tmrStart;
     }
 }
 

@@ -61,12 +61,52 @@ namespace Sam_vs_Stalin_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] battle {
+            get {
+                object obj = ResourceManager.GetObject("battle", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] failure {
+            get {
+                object obj = ResourceManager.GetObject("failure", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap fez {
             get {
                 object obj = ResourceManager.GetObject("fez", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] gameset {
+            get {
+                object obj = ResourceManager.GetObject("gameset", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] gerudo {
+            get {
+                object obj = ResourceManager.GetObject("gerudo", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

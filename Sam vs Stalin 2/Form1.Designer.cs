@@ -61,6 +61,7 @@ namespace Sam_vs_Stalin_2
             this.leonidas.Size = new System.Drawing.Size(137, 100);
             this.leonidas.TabIndex = 0;
             this.leonidas.TabStop = false;
+            this.leonidas.Tag = "W";
             // 
             // xerxes
             // 
@@ -72,6 +73,7 @@ namespace Sam_vs_Stalin_2
             this.xerxes.Size = new System.Drawing.Size(137, 100);
             this.xerxes.TabIndex = 1;
             this.xerxes.TabStop = false;
+            this.xerxes.Tag = "L";
             // 
             // spear
             // 
@@ -119,6 +121,7 @@ namespace Sam_vs_Stalin_2
             this.leonidasHealth.Name = "leonidasHealth";
             this.leonidasHealth.Size = new System.Drawing.Size(185, 23);
             this.leonidasHealth.TabIndex = 5;
+            this.leonidasHealth.Tag = "L";
             this.leonidasHealth.Value = 100;
             // 
             // xerxesHealth
@@ -127,6 +130,7 @@ namespace Sam_vs_Stalin_2
             this.xerxesHealth.Name = "xerxesHealth";
             this.xerxesHealth.Size = new System.Drawing.Size(185, 23);
             this.xerxesHealth.TabIndex = 6;
+            this.xerxesHealth.Tag = "W";
             this.xerxesHealth.Value = 100;
             // 
             // tmrLeoUp
@@ -185,10 +189,13 @@ namespace Sam_vs_Stalin_2
             this.Controls.Add(this.xerxes);
             this.Controls.Add(this.leonidas);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "SinglePlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sam vs Stalin 2: Leonidas vs Xerxes";
+            this.Load += new System.EventHandler(this.SinglePlayer_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SinglePlayer_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SinglePlayer_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.leonidas)).EndInit();
